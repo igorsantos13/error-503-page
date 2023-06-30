@@ -2,3 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+   .bounce-animation{
+    animation: bounce 12s;
+    animation-iteration-count: infinite;
+   }
+
+   @keyframes bounce {
+    
+    0%,
+    100%{
+        transform: translateY(-3px);
+    }
+    10%,
+    30%,
+    50%,
+    70%{
+        transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60%{
+        transform: translateY(8px);
+    }
+    80%{
+        transform: translateY(6.4px);
+    }
+    90%{
+        transform: translateY(-6.4px);
+    }
+   }
+}
